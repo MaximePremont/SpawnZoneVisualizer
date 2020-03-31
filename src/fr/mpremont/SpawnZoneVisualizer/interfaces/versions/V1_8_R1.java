@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import fr.mpremont.SpawnZoneVisualizer.custom.ParticleEffect;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
-public class V1_8_R3 implements Version{
+public class V1_8_R1 implements Version{
 
 	public Sound getSound(String sound) {
 		

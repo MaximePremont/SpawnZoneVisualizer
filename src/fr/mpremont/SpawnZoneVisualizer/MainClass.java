@@ -14,6 +14,7 @@ import fr.mpremont.SpawnZoneVisualizer.managers.PlayersManager;
 import fr.mpremont.SpawnZoneVisualizer.managers.SchedulersManager;
 import fr.mpremont.SpawnZoneVisualizer.managers.VersionsManager;
 import fr.mpremont.SpawnZoneVisualizer.utils.Metrics;
+import fr.mpremont.SpawnZoneVisualizer.utils.UpdateChecker;
 
 public class MainClass extends JavaPlugin{
 	
@@ -30,7 +31,7 @@ public class MainClass extends JavaPlugin{
 				
 				getConfig().options().copyDefaults(true);
 				saveDefaultConfig();
-				Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualize§a] §aConfiguration file created !");
+				Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §aConfiguration file created !");
 				
 			}
 			
@@ -44,6 +45,17 @@ public class MainClass extends JavaPlugin{
 				@SuppressWarnings("unused")
 				Metrics metrics = new Metrics(this, pluginId);
 				
+				try {
+					
+					UpdateChecker updater = new UpdateChecker(this, 76762);
+					if(updater.checkForUpdates()) {
+						Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+					}
+					
+				}catch (Exception e) {
+					Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cCould not check for updates !");
+				}
+				
 			}else {
 				
 				Bukkit.getPluginManager().disablePlugin(this);
@@ -52,7 +64,7 @@ public class MainClass extends JavaPlugin{
 			
 		}else {
 			
-			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualize§a] §cUnsupported minecraft version !");
+			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cUnsupported minecraft version !");
 			Bukkit.getPluginManager().disablePlugin(this);
 			
 		}
@@ -63,7 +75,7 @@ public class MainClass extends JavaPlugin{
 		
 		for(Player pls : PlayersManager.getPlayers()) {
 			
-			pls.sendMessage("§a[§eSpawnZoneVisualize§a] §cDisplay of spawn zones disabled !");
+			pls.sendMessage("§a[§eSpawnZoneVisualizer§a] §cDisplay of spawn zones disabled !");
 			
 		}
 		

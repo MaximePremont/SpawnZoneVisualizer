@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import fr.mpremont.SpawnZoneVisualizer.custom.ParticleEffect;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
-public class V1_8_R3 implements Version{
+public class V1_9_R1 implements Version{
 
 	public Sound getSound(String sound) {
 		
@@ -100,6 +100,16 @@ public class V1_8_R3 implements Version{
 			spt.add(Material.SLIME_BLOCK);
 			spt.add(Material.SKULL);
 			spt.add(Material.DRAGON_EGG);
+			spt.add(Material.END_ROD);
+			spt.add(Material.PURPUR_SLAB);
+			spt.add(Material.PURPUR_STAIRS);
+			spt.add(Material.GRASS_PATH);
+			spt.add(Material.CHORUS_FLOWER);
+			spt.add(Material.CHORUS_PLANT);
+			spt.add(Material.CHORUS_FRUIT_POPPED);
+			spt.add(Material.CHORUS_FRUIT);
+			spt.add(Material.END_CRYSTAL);
+			
 		}
 		
 		Material m = block.getType();

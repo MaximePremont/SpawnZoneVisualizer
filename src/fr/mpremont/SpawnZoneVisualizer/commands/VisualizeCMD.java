@@ -23,18 +23,18 @@ public class VisualizeCMD implements CommandExecutor{
 				if(PlayersManager.containsPlayer(p)) {
 					
 					PlayersManager.removePlayer(p);
-					p.sendMessage("§a[§eSpawnZoneVisualize§a] §cDisplay of spawn zones disabled !");
+					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §cDisplay of spawn zones disabled !");
 					
 				}else {
 					
 					PlayersManager.addPlayer(p);
-					p.sendMessage("§a[§eSpawnZoneVisualize§a] §aDisplay of spawn zones enabled !\n§lTIP:§r §aUsing this mode is easier at night.");
+					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §aDisplay of spawn zones enabled !\n§lTIP:§r §aUsing this mode is easier at night.");
 					
 				}
 				
 			}else {
 				
-				p.sendMessage("§a[§eSpawnZoneVisualize§a] §cYou don't have the permission !");
+				p.sendMessage("§a[§eSpawnZoneVisualizer§a] §cYou don't have the permission !");
 				
 			}
 			
@@ -42,7 +42,7 @@ public class VisualizeCMD implements CommandExecutor{
 		
 		if(sender instanceof ConsoleCommandSender) {
 			
-			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualize§a] §cThis command cannot be used in the console !");
+			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cThis command cannot be used in the console !");
 			
 		}
 		
