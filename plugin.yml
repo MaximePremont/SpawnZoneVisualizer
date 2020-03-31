@@ -1,0 +1,6 @@
+main: fr.mpremont.SpawnZoneVisualizer.MainClass
+version: 1.0.0
+author: MaximePremont
+name: SpawnZoneVisualizer
+commands:
+    visualize:

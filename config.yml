@@ -1,0 +1,10 @@
+# ========== Spawn Zone Visualizer by MaximePremont ==========
+
+# Check radius ( putting a value higher than the display is useless )
+Radius: 20
+
+# Check for updates and send a message to the console
+UpdateCheck: true
+
+# [Do not touch ] Configuration version
+ConfigVersion: 1.0.0#en
