@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 
 import fr.mpremont.SpawnZoneVisualizer.custom.ParticleEffect;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
+import fr.mpremont.SpawnZoneVisualizer.utils.XMaterial;
 
 public class V1_9_R2 implements Version{
 
@@ -24,37 +25,33 @@ public class V1_9_R2 implements Version{
 		
 		boolean result = true;
 		if(spt.size() == 0) {
-			spt.add(Material.LEAVES);
-			spt.add(Material.LEAVES_2);
-			spt.add(Material.FENCE);
-			spt.add(Material.WOODEN_DOOR);
-			spt.add(Material.IRON_DOOR_BLOCK);
+			spt.add(XMaterial.ACACIA_LEAVES.parseMaterial());
+			spt.add(XMaterial.OAK_LEAVES.parseMaterial());
+			spt.add(XMaterial.OAK_FENCE.parseMaterial());
+			spt.add(XMaterial.OAK_DOOR.parseMaterial());
+			spt.add(XMaterial.IRON_DOOR.parseMaterial());
 			spt.add(Material.BRICK_STAIRS);
 			spt.add(Material.COBBLESTONE_STAIRS);
 			spt.add(Material.NETHER_BRICK_STAIRS);
 			spt.add(Material.QUARTZ_STAIRS);
 			spt.add(Material.RED_SANDSTONE_STAIRS);
 			spt.add(Material.SANDSTONE_STAIRS);
-			spt.add(Material.SMOOTH_STAIRS);
-			spt.add(Material.WOOD_STAIRS);
+			spt.add(XMaterial.STONE_BRICK_STAIRS.parseMaterial());
+			spt.add(XMaterial.OAK_STAIRS.parseMaterial());
 			spt.add(Material.CHEST);
 			spt.add(Material.TRAPPED_CHEST);
 			spt.add(Material.ENDER_CHEST);
 			spt.add(Material.STONE_BUTTON);
-			spt.add(Material.WOOD_BUTTON);
+			spt.add(XMaterial.OAK_BUTTON.parseMaterial());
 			spt.add(Material.GLASS);
-			spt.add(Material.STAINED_GLASS);
-			spt.add(Material.THIN_GLASS);
-			spt.add(Material.STAINED_GLASS_PANE);
-			spt.add(Material.BED);
-			spt.add(Material.STEP);
-			spt.add(Material.WOOD_STEP);
-			spt.add(Material.WOOD_DOUBLE_STEP);
-			spt.add(Material.DOUBLE_STEP);
-			spt.add(Material.DAYLIGHT_DETECTOR);
-			spt.add(Material.DAYLIGHT_DETECTOR_INVERTED);
+			spt.add(XMaterial.WHITE_STAINED_GLASS.parseMaterial());
+			spt.add(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial());
+			spt.add(XMaterial.WHITE_BED.parseMaterial());
+			spt.add(XMaterial.BRICK_SLAB.parseMaterial());
+			spt.add(XMaterial.ACACIA_SLAB.parseMaterial());
+			spt.add(XMaterial.DAYLIGHT_DETECTOR.parseMaterial());
 			spt.add(Material.IRON_TRAPDOOR);
-			spt.add(Material.TRAP_DOOR);
+			spt.add(XMaterial.ACACIA_TRAPDOOR.parseMaterial());
 			spt.add(Material.BARRIER);
 			spt.add(Material.COCOA);
 			spt.add(Material.CACTUS);
@@ -65,40 +62,37 @@ public class V1_9_R2 implements Version{
 			spt.add(Material.TNT);
 			spt.add(Material.ANVIL);
 			spt.add(Material.BREWING_STAND);
-			spt.add(Material.CAKE_BLOCK);
+			spt.add(XMaterial.CAKE.parseMaterial());
 			spt.add(Material.CAULDRON);
 			spt.add(Material.LADDER);
 			spt.add(Material.VINE);
 			spt.add(Material.JACK_O_LANTERN);
-			spt.add(Material.ENDER_PORTAL_FRAME);
-			spt.add(Material.BURNING_FURNACE);
+			spt.add(XMaterial.END_PORTAL_FRAME.parseMaterial());
+			spt.add(XMaterial.BLAST_FURNACE.parseMaterial());
 			spt.add(Material.TORCH);
-			spt.add(Material.REDSTONE_TORCH_ON);
-			spt.add(Material.REDSTONE_TORCH_OFF);
-			spt.add(Material.COBBLE_WALL);
-			spt.add(Material.IRON_FENCE);
-			spt.add(Material.RAILS);
+			spt.add(XMaterial.REDSTONE_TORCH.parseMaterial());
+			spt.add(XMaterial.COBBLESTONE_WALL.parseMaterial());
+			spt.add(XMaterial.IRON_BARS.parseMaterial());
+			spt.add(XMaterial.RAIL.parseMaterial());
 			spt.add(Material.ACTIVATOR_RAIL);
 			spt.add(Material.DETECTOR_RAIL);
 			spt.add(Material.POWERED_RAIL);
 			spt.add(Material.REDSTONE_WIRE);
-			spt.add(Material.REDSTONE_COMPARATOR);
+			spt.add(XMaterial.COMPARATOR.parseMaterial());
 			spt.add(Material.REDSTONE);
-			spt.add(Material.CARPET);
-			spt.add(Material.WOOD_PLATE);
-			spt.add(Material.IRON_PLATE);
-			spt.add(Material.WATER_LILY);
-			spt.add(Material.WEB);
-			spt.add(Material.MOB_SPAWNER);
-			spt.add(Material.DIODE);
-			spt.add(Material.DIODE_BLOCK_ON);
-			spt.add(Material.DIODE_BLOCK_OFF);
-			spt.add(Material.MYCEL);
+			spt.add(XMaterial.ORANGE_CARPET.parseMaterial());
+			spt.add(XMaterial.ACACIA_PRESSURE_PLATE.parseMaterial());
+			spt.add(XMaterial.HEAVY_WEIGHTED_PRESSURE_PLATE.parseMaterial());
+			spt.add(XMaterial.LILY_PAD.parseMaterial());
+			spt.add(XMaterial.COBWEB.parseMaterial());
+			spt.add(XMaterial.SPAWNER.parseMaterial());
+			spt.add(XMaterial.REPEATER.parseMaterial());
+			spt.add(XMaterial.MYCELIUM.parseMaterial());
 			spt.add(Material.BROWN_MUSHROOM);
 			spt.add(Material.RED_MUSHROOM);
 			spt.add(Material.FIRE);
 			spt.add(Material.SLIME_BLOCK);
-			spt.add(Material.SKULL);
+			spt.add(XMaterial.CREEPER_HEAD.parseMaterial());
 			spt.add(Material.DRAGON_EGG);
 			spt.add(Material.END_ROD);
 			spt.add(Material.PURPUR_SLAB);
@@ -106,7 +100,6 @@ public class V1_9_R2 implements Version{
 			spt.add(Material.GRASS_PATH);
 			spt.add(Material.CHORUS_FLOWER);
 			spt.add(Material.CHORUS_PLANT);
-			spt.add(Material.CHORUS_FRUIT_POPPED);
 			spt.add(Material.CHORUS_FRUIT);
 			spt.add(Material.END_CRYSTAL);
 			
@@ -129,19 +122,19 @@ public class V1_9_R2 implements Version{
 		
 		if(is.size() == 0) {
 			is.add(Material.AIR);
-			is.add(Material.LONG_GRASS);
-			is.add(Material.DOUBLE_PLANT);
-			is.add(Material.YELLOW_FLOWER);
-			is.add(Material.RED_ROSE);
-			is.add(Material.SUGAR_CANE_BLOCK);
+			is.add(XMaterial.FERN.parseMaterial());
+			is.add(XMaterial.TALL_GRASS.parseMaterial());
+			is.add(XMaterial.SUNFLOWER.parseMaterial());
+			is.add(XMaterial.ALLIUM.parseMaterial());
+			is.add(XMaterial.BAMBOO.parseMaterial());
 			is.add(Material.SNOW);
-			is.add(Material.CROPS);
+			is.add(XMaterial.WHEAT.parseMaterial());
 			is.add(Material.CARROT);
 			is.add(Material.MELON_SEEDS);
 			is.add(Material.MELON_STEM);
 			is.add(Material.POTATO);
-			is.add(Material.STANDING_BANNER);
-			is.add(Material.WALL_BANNER);
+			is.add(XMaterial.DANDELION.parseMaterial());
+			is.add(XMaterial.WHITE_BANNER.parseMaterial());
 			is.add(Material.DEAD_BUSH);
 		}
 		

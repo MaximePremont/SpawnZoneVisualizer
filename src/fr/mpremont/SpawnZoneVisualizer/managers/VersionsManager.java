@@ -7,6 +7,7 @@ import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_10_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_11_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_12_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_13_R1;
+import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_13_R2;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R2;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R3;
@@ -33,7 +34,11 @@ public class VersionsManager {
 			
 		}
 		
-		if(version.equals("v1_12_R1")) {
+		if(version.equals("v1_13_R2")) {
+			vclass = new V1_13_R2();
+		}else if(version.equals("v1_13_R1")) {
+			vclass = new V1_13_R1();
+		}else if(version.equals("v1_12_R1")) {
 			vclass = new V1_12_R1();
 		}else if(version.equals("v1_11_R1")) {
 			vclass = new V1_11_R1();
@@ -50,8 +55,7 @@ public class VersionsManager {
 		}else if(version.equals("v1_8_R1")){
 			vclass = new V1_8_R1();
 		}else {
-			vclass = new V1_13_R1();
-			//result = false;
+			result = false;
 		}
 		
 		return result;

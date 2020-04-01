@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 import fr.mpremont.SpawnZoneVisualizer.utils.ReflectionUtils;
+import fr.mpremont.SpawnZoneVisualizer.utils.XMaterial;
 import fr.mpremont.SpawnZoneVisualizer.utils.ReflectionUtils.PackageType;
 
 import java.lang.reflect.Constructor;
@@ -503,7 +504,7 @@ public enum ParticleEffect {
 	 */
 	private static boolean isWater(Location location) {
 		Material material = location.getBlock().getType();
-		return material == Material.WATER || material == Material.STATIONARY_WATER;
+		return material == Material.WATER || material == XMaterial.WATER.parseMaterial();
 	}
 
 	/**

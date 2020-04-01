@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
-public class V1_13_R1 implements Version{
+public class V1_13_R2 implements Version{
 
 	public Sound getSound(String sound) {
 		
