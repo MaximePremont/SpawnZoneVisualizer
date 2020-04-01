@@ -45,15 +45,19 @@ public class MainClass extends JavaPlugin{
 				@SuppressWarnings("unused")
 				Metrics metrics = new Metrics(this, pluginId);
 				
-				try {
+				if(getConfig().getBoolean("UpdateCheck")) {
 					
-					UpdateChecker updater = new UpdateChecker(this, 76762);
-					if(updater.checkForUpdates()) {
-						Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+					try {
+						
+						UpdateChecker updater = new UpdateChecker(this, 76762);
+						if(updater.checkForUpdates()) {
+							Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+						}
+						
+					}catch (Exception e) {
+						Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cCould not check for updates !");
 					}
 					
-				}catch (Exception e) {
-					Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cCould not check for updates !");
 				}
 				
 			}else {

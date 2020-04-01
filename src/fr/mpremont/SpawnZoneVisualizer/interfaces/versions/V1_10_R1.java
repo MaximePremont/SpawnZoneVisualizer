@@ -1,17 +1,18 @@
 package fr.mpremont.SpawnZoneVisualizer.interfaces.versions;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import fr.mpremont.SpawnZoneVisualizer.custom.ParticleEffect;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
-public class V1_8_R2 implements Version{
+public class V1_10_R1 implements Version{
 
 	public Sound getSound(String sound) {
 		
@@ -100,6 +101,18 @@ public class V1_8_R2 implements Version{
 			spt.add(Material.SLIME_BLOCK);
 			spt.add(Material.SKULL);
 			spt.add(Material.DRAGON_EGG);
+			spt.add(Material.END_ROD);
+			spt.add(Material.PURPUR_SLAB);
+			spt.add(Material.PURPUR_STAIRS);
+			spt.add(Material.GRASS_PATH);
+			spt.add(Material.CHORUS_FLOWER);
+			spt.add(Material.CHORUS_PLANT);
+			spt.add(Material.CHORUS_FRUIT_POPPED);
+			spt.add(Material.CHORUS_FRUIT);
+			spt.add(Material.END_CRYSTAL);
+			spt.add(Material.MAGMA);
+			spt.add(Material.BLACK_SHULKER_BOX);
+			
 		}
 		
 		Material m = block.getType();
@@ -150,7 +163,14 @@ public class V1_8_R2 implements Version{
 
 	public void showParticle(float offsetX, float offsetY, float offsetZ, float speed, int amount, Location center, Player player) {
 		
-		ParticleEffect.FLAME.display(offsetX, offsetY, offsetZ, speed, amount, center, player);
+		for(int i = 0; i <= amount; i++) {
+			double x = center.getX()+((new Random().nextInt(5)+0.0)/10)-offsetX;
+			double y = center.getY()+((new Random().nextInt(5)+0.0)/10)-offsetY;
+			double z = center.getZ()+((new Random().nextInt(5)+0.0)/10)-offsetZ;
+			
+			player.spawnParticle(Particle.FLAME, x, y, z, 0, 0, 0, 0);
+			
+		}
 		
 	}
 

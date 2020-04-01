@@ -142,6 +142,7 @@ public class V1_9_R2 implements Version{
 			is.add(Material.POTATO);
 			is.add(Material.STANDING_BANNER);
 			is.add(Material.WALL_BANNER);
+			is.add(Material.DEAD_BUSH);
 		}
 		
 		Material m = block.getType();
