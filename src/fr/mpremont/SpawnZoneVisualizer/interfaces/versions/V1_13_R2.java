@@ -10,6 +10,7 @@ import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
+import fr.mpremont.SpawnZoneVisualizer.XSeries.XMaterial;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
 public class V1_13_R2 implements Version{
@@ -250,6 +251,16 @@ public class V1_13_R2 implements Version{
 			spt.add(Material.WHITE_SHULKER_BOX);
 			spt.add(Material.YELLOW_SHULKER_BOX);
 			spt.add(Material.SHULKER_BOX);
+			spt.add(Material.ACACIA_SIGN);
+			spt.add(Material.ACACIA_WALL_SIGN);
+			spt.add(Material.BIRCH_SIGN);
+			spt.add(Material.BIRCH_WALL_SIGN);
+			spt.add(Material.DARK_OAK_SIGN);
+			spt.add(Material.DARK_OAK_WALL_SIGN);
+			spt.add(Material.JUNGLE_WALL_SIGN);
+			spt.add(Material.JUNGLE_SIGN);
+			spt.add(Material.OAK_SIGN);
+			spt.add(Material.OAK_WALL_SIGN);
 			
 		}
 		
@@ -274,7 +285,7 @@ public class V1_13_R2 implements Version{
 			is.add(Material.GRASS);
 			is.add(Material.SUNFLOWER);
 			is.add(Material.ROSE_BUSH);
-			is.add(Material.ROSE_RED);
+			is.add(XMaterial.RED_DYE.parseMaterial());
 			is.add(Material.SUGAR_CANE);
 			is.add(Material.SNOW);
 			is.add(Material.BEETROOT_SEEDS);

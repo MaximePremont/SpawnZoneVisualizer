@@ -8,9 +8,10 @@ import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
+import fr.mpremont.SpawnZoneVisualizer.XSeries.XBlock;
+import fr.mpremont.SpawnZoneVisualizer.XSeries.XMaterial;
 import fr.mpremont.SpawnZoneVisualizer.custom.ParticleEffect;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
-import fr.mpremont.SpawnZoneVisualizer.utils.XMaterial;
 
 public class V1_8_R1 implements Version{
 
@@ -94,6 +95,8 @@ public class V1_8_R1 implements Version{
 			spt.add(Material.SLIME_BLOCK);
 			spt.add(XMaterial.CREEPER_HEAD.parseMaterial());
 			spt.add(Material.DRAGON_EGG);
+			spt.add(XMaterial.OAK_SIGN.parseMaterial());
+			spt.add(XMaterial.OAK_WALL_SIGN.parseMaterial());
 		}
 		
 		Material m = block.getType();
@@ -117,7 +120,6 @@ public class V1_8_R1 implements Version{
 			is.add(XMaterial.TALL_GRASS.parseMaterial());
 			is.add(XMaterial.SUNFLOWER.parseMaterial());
 			is.add(XMaterial.ALLIUM.parseMaterial());
-			is.add(XMaterial.BAMBOO.parseMaterial());
 			is.add(Material.SNOW);
 			is.add(XMaterial.WHEAT.parseMaterial());
 			is.add(Material.CARROT);
@@ -130,7 +132,7 @@ public class V1_8_R1 implements Version{
 		}
 		
 		Material m = block.getType();
-		if(is.contains(m)) {
+		if(is.contains(m) || XBlock.isSugarCane(m)) {
 			
 			return true;
 			

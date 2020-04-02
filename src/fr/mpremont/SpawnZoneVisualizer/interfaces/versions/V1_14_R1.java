@@ -10,10 +10,9 @@ import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import fr.mpremont.SpawnZoneVisualizer.XSeries.XMaterial;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
 
-public class V1_13_R1 implements Version{
+public class V1_14_R1 implements Version{
 
 	public Sound getSound(String sound) {
 		
@@ -39,24 +38,6 @@ public class V1_13_R1 implements Version{
 			spt.add(Material.OAK_DOOR);
 			spt.add(Material.SPRUCE_DOOR);
 			spt.add(Material.IRON_DOOR);
-			spt.add(Material.BRICK_STAIRS);
-			spt.add(Material.COBBLESTONE_STAIRS);
-			spt.add(Material.NETHER_BRICK_STAIRS);
-			spt.add(Material.QUARTZ_STAIRS);
-			spt.add(Material.RED_SANDSTONE_STAIRS);
-			spt.add(Material.SANDSTONE_STAIRS);
-			spt.add(Material.ACACIA_STAIRS);
-			spt.add(Material.BIRCH_STAIRS);
-			spt.add(Material.DARK_OAK_STAIRS);
-			spt.add(Material.DARK_PRISMARINE_STAIRS);
-			spt.add(Material.JUNGLE_STAIRS);
-			spt.add(Material.OAK_STAIRS);
-			spt.add(Material.PRISMARINE_BRICK_STAIRS);
-			spt.add(Material.PRISMARINE_STAIRS);
-			spt.add(Material.PURPUR_STAIRS);
-			spt.add(Material.SANDSTONE_STAIRS);
-			spt.add(Material.SPRUCE_STAIRS);
-			spt.add(Material.STONE_BRICK_STAIRS);
 			spt.add(Material.CHEST);
 			spt.add(Material.TRAPPED_CHEST);
 			spt.add(Material.ENDER_CHEST);
@@ -118,25 +99,6 @@ public class V1_13_R1 implements Version{
 			spt.add(Material.RED_BED);
 			spt.add(Material.WHITE_BED);
 			spt.add(Material.YELLOW_BED);
-			spt.add(Material.ACACIA_SLAB);
-			spt.add(Material.BIRCH_SLAB);
-			spt.add(Material.BRICK_SLAB);
-			spt.add(Material.COBBLESTONE_SLAB);
-			spt.add(Material.DARK_OAK_SLAB);
-			spt.add(Material.DARK_PRISMARINE_SLAB);
-			spt.add(Material.JUNGLE_SLAB);
-			spt.add(Material.NETHER_BRICK_SLAB);
-			spt.add(Material.OAK_SLAB);
-			spt.add(Material.PETRIFIED_OAK_SLAB);
-			spt.add(Material.PRISMARINE_BRICK_SLAB);
-			spt.add(Material.PRISMARINE_SLAB);
-			spt.add(Material.PURPUR_SLAB);
-			spt.add(Material.QUARTZ_SLAB);
-			spt.add(Material.RED_SANDSTONE_SLAB);
-			spt.add(Material.SANDSTONE_SLAB);
-			spt.add(Material.SPRUCE_SLAB);
-			spt.add(Material.STONE_BRICK_SLAB);
-			spt.add(Material.STONE_SLAB);
 			spt.add(Material.DAYLIGHT_DETECTOR);
 			spt.add(Material.IRON_TRAPDOOR);
 			spt.add(Material.ACACIA_TRAPDOOR);
@@ -251,6 +213,91 @@ public class V1_13_R1 implements Version{
 			spt.add(Material.WHITE_SHULKER_BOX);
 			spt.add(Material.YELLOW_SHULKER_BOX);
 			spt.add(Material.SHULKER_BOX);
+			spt.add(Material.SWEET_BERRY_BUSH);
+			spt.add(Material.BELL);
+			spt.add(Material.COMPOSTER);
+			spt.add(Material.ANDESITE_SLAB);
+			spt.add(Material.ACACIA_SLAB);
+			spt.add(Material.ANDESITE_SLAB);
+			spt.add(Material.BIRCH_SLAB);
+			spt.add(Material.BRICK_SLAB);
+			spt.add(Material.COBBLESTONE_SLAB);
+			spt.add(Material.CUT_RED_SANDSTONE_SLAB);
+			spt.add(Material.CUT_SANDSTONE_SLAB);
+			spt.add(Material.DARK_OAK_SLAB);
+			spt.add(Material.DARK_PRISMARINE_SLAB);
+			spt.add(Material.DIORITE_SLAB);
+			spt.add(Material.END_STONE_BRICK_SLAB);
+			spt.add(Material.GRANITE_SLAB);
+			spt.add(Material.JUNGLE_SLAB);
+			spt.add(Material.MOSSY_COBBLESTONE_SLAB);
+			spt.add(Material.MOSSY_STONE_BRICK_SLAB);
+			spt.add(Material.NETHER_BRICK_SLAB);
+			spt.add(Material.OAK_SLAB);
+			spt.add(Material.PETRIFIED_OAK_SLAB);
+			spt.add(Material.POLISHED_ANDESITE_SLAB);
+			spt.add(Material.POLISHED_DIORITE_SLAB);
+			spt.add(Material.POLISHED_GRANITE_SLAB);
+			spt.add(Material.PRISMARINE_BRICK_SLAB);
+			spt.add(Material.PURPUR_SLAB);
+			spt.add(Material.QUARTZ_SLAB);
+			spt.add(Material.RED_NETHER_BRICK_SLAB);
+			spt.add(Material.RED_SANDSTONE_SLAB);
+			spt.add(Material.SANDSTONE_SLAB);
+			spt.add(Material.SMOOTH_QUARTZ_SLAB);
+			spt.add(Material.SMOOTH_RED_SANDSTONE_SLAB);
+			spt.add(Material.SMOOTH_SANDSTONE_SLAB);
+			spt.add(Material.SMOOTH_STONE_SLAB);
+			spt.add(Material.SPRUCE_SLAB);
+			spt.add(Material.STONE_BRICK_SLAB);
+			spt.add(Material.STONE_SLAB);
+			spt.add(Material.SCAFFOLDING);
+			spt.add(Material.ACACIA_STAIRS);
+			spt.add(Material.ANDESITE_STAIRS);
+			spt.add(Material.BIRCH_STAIRS);
+			spt.add(Material.BRICK_STAIRS);
+			spt.add(Material.COBBLESTONE_STAIRS);
+			spt.add(Material.DARK_OAK_STAIRS);
+			spt.add(Material.DARK_PRISMARINE_STAIRS);
+			spt.add(Material.DIORITE_STAIRS);
+			spt.add(Material.END_STONE_BRICK_STAIRS);
+			spt.add(Material.GRANITE_STAIRS);
+			spt.add(Material.JUNGLE_STAIRS);
+			spt.add(Material.MOSSY_COBBLESTONE_STAIRS);
+			spt.add(Material.MOSSY_STONE_BRICK_STAIRS);
+			spt.add(Material.NETHER_BRICK_STAIRS);
+			spt.add(Material.OAK_STAIRS);
+			spt.add(Material.POLISHED_ANDESITE_STAIRS);
+			spt.add(Material.POLISHED_DIORITE_STAIRS);
+			spt.add(Material.POLISHED_GRANITE_STAIRS);
+			spt.add(Material.PRISMARINE_BRICK_STAIRS);
+			spt.add(Material.PURPUR_STAIRS);
+			spt.add(Material.QUARTZ_STAIRS);
+			spt.add(Material.RED_NETHER_BRICK_STAIRS);
+			spt.add(Material.RED_SANDSTONE_STAIRS);
+			spt.add(Material.SANDSTONE_STAIRS);
+			spt.add(Material.SMOOTH_QUARTZ_STAIRS);
+			spt.add(Material.SMOOTH_RED_SANDSTONE_STAIRS);
+			spt.add(Material.SMOOTH_SANDSTONE_STAIRS);
+			spt.add(Material.SPRUCE_STAIRS);
+			spt.add(Material.STONE_BRICK_STAIRS);
+			spt.add(Material.STONE_STAIRS);
+			spt.add(Material.CAMPFIRE);
+			spt.add(Material.LANTERN);
+			spt.add(Material.GRINDSTONE);
+			spt.add(Material.ANDESITE_WALL);
+			spt.add(Material.BRICK_WALL);
+			spt.add(Material.COBBLESTONE_WALL);
+			spt.add(Material.DIORITE_WALL);
+			spt.add(Material.END_STONE_BRICK_WALL);
+			spt.add(Material.GRANITE_WALL);
+			spt.add(Material.MOSSY_COBBLESTONE_WALL);
+			spt.add(Material.MOSSY_STONE_BRICK_WALL);
+			spt.add(Material.NETHER_BRICK_WALL);
+			spt.add(Material.RED_NETHER_BRICK_WALL);
+			spt.add(Material.RED_SANDSTONE_WALL);
+			spt.add(Material.SANDSTONE_WALL);
+			spt.add(Material.STONE_BRICK_WALL);
 			spt.add(Material.ACACIA_SIGN);
 			spt.add(Material.ACACIA_WALL_SIGN);
 			spt.add(Material.BIRCH_SIGN);
@@ -261,6 +308,10 @@ public class V1_13_R1 implements Version{
 			spt.add(Material.JUNGLE_SIGN);
 			spt.add(Material.OAK_SIGN);
 			spt.add(Material.OAK_WALL_SIGN);
+			spt.add(Material.SPRUCE_SIGN);
+			spt.add(Material.SPRUCE_WALL_SIGN);
+			spt.add(Material.LECTERN);
+			spt.add(Material.STONECUTTER);
 			
 		}
 		
@@ -285,7 +336,7 @@ public class V1_13_R1 implements Version{
 			is.add(Material.GRASS);
 			is.add(Material.SUNFLOWER);
 			is.add(Material.ROSE_BUSH);
-			is.add(XMaterial.RED_DYE.parseMaterial());
+			is.add(Material.ROSE_BUSH);
 			is.add(Material.SUGAR_CANE);
 			is.add(Material.SNOW);
 			is.add(Material.BEETROOT_SEEDS);
@@ -330,6 +381,8 @@ public class V1_13_R1 implements Version{
 			is.add(Material.WHITE_WALL_BANNER);
 			is.add(Material.YELLOW_BANNER);
 			is.add(Material.YELLOW_WALL_BANNER);
+			is.add(Material.BAMBOO);
+			is.add(Material.BAMBOO_SAPLING);
 		}
 		
 		Material m = block.getType();

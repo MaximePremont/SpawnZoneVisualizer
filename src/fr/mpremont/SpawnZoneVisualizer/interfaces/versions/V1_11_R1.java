@@ -10,8 +10,9 @@ import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
+import fr.mpremont.SpawnZoneVisualizer.XSeries.XBlock;
+import fr.mpremont.SpawnZoneVisualizer.XSeries.XMaterial;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.Version;
-import fr.mpremont.SpawnZoneVisualizer.utils.XMaterial;
 
 public class V1_11_R1 implements Version{
 
@@ -120,6 +121,8 @@ public class V1_11_R1 implements Version{
 			spt.add(XMaterial.LIGHT_GRAY_SHULKER_BOX.parseMaterial());
 			spt.add(Material.WHITE_SHULKER_BOX);
 			spt.add(Material.YELLOW_SHULKER_BOX);
+			spt.add(XMaterial.OAK_SIGN.parseMaterial());
+			spt.add(XMaterial.OAK_WALL_SIGN.parseMaterial());
 			
 		}
 		
@@ -144,7 +147,6 @@ public class V1_11_R1 implements Version{
 			is.add(XMaterial.TALL_GRASS.parseMaterial());
 			is.add(XMaterial.SUNFLOWER.parseMaterial());
 			is.add(XMaterial.ALLIUM.parseMaterial());
-			is.add(XMaterial.BAMBOO.parseMaterial());
 			is.add(Material.SNOW);
 			is.add(XMaterial.WHEAT.parseMaterial());
 			is.add(Material.CARROT);
@@ -157,7 +159,7 @@ public class V1_11_R1 implements Version{
 		}
 		
 		Material m = block.getType();
-		if(is.contains(m)) {
+		if(is.contains(m) || XBlock.isSugarCane(m)) {
 			
 			return true;
 			
