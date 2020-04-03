@@ -383,6 +383,8 @@ public class V1_14_R1 implements Version{
 			is.add(Material.YELLOW_WALL_BANNER);
 			is.add(Material.BAMBOO);
 			is.add(Material.BAMBOO_SAPLING);
+			is.add(Material.CAVE_AIR);
+			
 		}
 		
 		Material m = block.getType();

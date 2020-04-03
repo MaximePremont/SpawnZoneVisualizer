@@ -330,6 +330,7 @@ public class V1_13_R2 implements Version{
 			is.add(Material.WHITE_WALL_BANNER);
 			is.add(Material.YELLOW_BANNER);
 			is.add(Material.YELLOW_WALL_BANNER);
+			is.add(Material.CAVE_AIR);
 		}
 		
 		Material m = block.getType();
