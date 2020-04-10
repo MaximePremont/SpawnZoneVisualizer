@@ -5,6 +5,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 
 import fr.mpremont.SpawnZoneVisualizer.MainClass;
+import fr.mpremont.SpawnZoneVisualizer.events.JoinEvents;
 import fr.mpremont.SpawnZoneVisualizer.events.QuitEvents;
 
 public class EventsManager {
@@ -15,6 +16,7 @@ public class EventsManager {
 		PluginManager pm = Bukkit.getPluginManager();
 		
 		pm.registerEvents(new QuitEvents(), p);
+		pm.registerEvents(new JoinEvents(), p);
 		
 	}
 

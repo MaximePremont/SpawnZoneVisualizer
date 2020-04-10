@@ -19,6 +19,7 @@ import fr.mpremont.SpawnZoneVisualizer.utils.UpdateChecker;
 public class MainClass extends JavaPlugin{
 	
 	private static Plugin plugin;
+	public static boolean update = false;
 	
 	public void onEnable() {
 		
@@ -52,6 +53,7 @@ public class MainClass extends JavaPlugin{
 						UpdateChecker updater = new UpdateChecker(this, 76762);
 						if(updater.checkForUpdates()) {
 							Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+							update = true;
 						}
 						
 					}catch (Exception e) {
