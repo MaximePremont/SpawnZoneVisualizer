@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
+import fr.mpremont.SpawnZoneVisualizer.MainClass;
 import fr.mpremont.SpawnZoneVisualizer.managers.PlayersManager;
 
 public class VisualizeCMD implements CommandExecutor{
@@ -23,18 +24,18 @@ public class VisualizeCMD implements CommandExecutor{
 				if(PlayersManager.containsPlayer(p)) {
 					
 					PlayersManager.removePlayer(p);
-					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §cDisplay of spawn zones disabled !");
+					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+MainClass.getInstance().getConfig().getString("Text.OffMessage").replaceAll("&", "§").replaceAll("===", "\n"));
 					
 				}else {
 					
 					PlayersManager.addPlayer(p);
-					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §aDisplay of spawn zones enabled !\n§lTIP:§r §aUsing this mode is easier at night.");
+					p.sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+MainClass.getInstance().getConfig().getString("Text.OnMessage").replaceAll("&", "§").replaceAll("===", "\n"));
 					
 				}
 				
 			}else {
 				
-				p.sendMessage("§a[§eSpawnZoneVisualizer§a] §cYou don't have the permission !");
+				p.sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+MainClass.getInstance().getConfig().getString("Text.NoPermission").replaceAll("&", "§").replaceAll("===", "\n"));
 				
 			}
 			
@@ -42,7 +43,7 @@ public class VisualizeCMD implements CommandExecutor{
 		
 		if(sender instanceof ConsoleCommandSender) {
 			
-			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cThis command cannot be used in the console !");
+			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+MainClass.getInstance().getConfig().getString("Text.NoConsole").replaceAll("&", "§").replaceAll("===", "\n"));
 			
 		}
 		

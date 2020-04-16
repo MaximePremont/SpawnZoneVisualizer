@@ -3,8 +3,19 @@
 # Check radius ( putting a value higher than the display is useless )
 Radius: 20
 
-# Check for updates and send a message to the console
+# Messages ( color codes are valid and use === for line break)
+Text:
+    OnMessage: "&aDisplay of spawn zones enabled !===&lTIP:&r &aUsing this mode is easier at night."
+    OffMessage: "&cDisplay of spawn zones disabled !"
+    NoPermission: "&cYou don't have the permission !"
+    NoConsole: "&cThis command cannot be used in the console !"
+    NewVersion: "&eA new version of the plugin is available !"
+    UpdateFail: "&cCould not check for updates !"
+# Changing the language will automatically change the configuration on the next reboot
+# Available languages : EN | FR | OTHER
+Language : "EN"
+# Check for updates
 UpdateCheck: true
 
 # [Do not touch ] Configuration version
-ConfigVersion: 1.0.0#en
+ConfigVersion: 1.0.7#en

@@ -16,7 +16,7 @@ public class JoinEvents implements Listener {
 			
 			Player p = e.getPlayer();
 			if(p.hasPermission("spawnzonevisualizer.update")) {
-				p.sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+				p.sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+MainClass.getInstance().getConfig().getString("Text.NewVersion").replaceAll("&", "§").replaceAll("===", "\n"));
 			}
 			
 		}

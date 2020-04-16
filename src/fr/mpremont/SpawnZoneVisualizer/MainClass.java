@@ -52,12 +52,12 @@ public class MainClass extends JavaPlugin{
 						
 						UpdateChecker updater = new UpdateChecker(this, 76762);
 						if(updater.checkForUpdates()) {
-							Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §eA new version of the plugin is available !");
+							Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+getConfig().getString("Text.NewVersion").replaceAll("&", "§").replaceAll("===", "\n"));
 							update = true;
 						}
 						
 					}catch (Exception e) {
-						Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §cCould not check for updates !");
+						Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+getConfig().getString("Text.UpdateFail").replaceAll("&", "§").replaceAll("===", "\n"));
 					}
 					
 				}
@@ -81,7 +81,7 @@ public class MainClass extends JavaPlugin{
 		
 		for(Player pls : PlayersManager.getPlayers()) {
 			
-			pls.sendMessage("§a[§eSpawnZoneVisualizer§a] §cDisplay of spawn zones disabled !");
+			pls.sendMessage("§a[§eSpawnZoneVisualizer§a] §r"+getConfig().getString("Text.OffMessage").replaceAll("&", "§").replaceAll("===", "\n"));
 			
 		}
 		
