@@ -19,7 +19,7 @@ public class ConfigManager {
 		String confv = MainClass.getInstance().getConfig().getString("ConfigVersion");
 		if(confv == null || confv == "" || (!confv.contains("#"))) {
 			
-			Bukkit.getConsoleSender().sendMessage("�a[�eSpawnZoneVisualize�a] �cInvalid configuration file !");
+			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualize§a] §cInvalid configuration file !");
 			result = false;
 			
 		}else {
@@ -27,7 +27,7 @@ public class ConfigManager {
 			Configuration c = MainClass.getInstance().getConfig();
 			String version = c.getString("ConfigVersion").split("#")[0];
 			
-			if(!version.equalsIgnoreCase("1.0.7")) {
+			if(!version.equalsIgnoreCase("1.0.8")) {
 				
 				setBasic(c);
 				MainClass.getInstance().reloadConfig();
@@ -42,6 +42,8 @@ public class ConfigManager {
 				
 				if(current.equalsIgnoreCase("FR")) {
 					setFR(c);
+				}else if(current.equalsIgnoreCase("RU")) {
+					setRU(c);
 				}else if(current.equalsIgnoreCase("OTHER")) {
 					setOTHER(c);
 				}else {
@@ -58,18 +60,18 @@ public class ConfigManager {
 		
 	}
 	
-	private static void setFR(Configuration c) {
+	private static void setRU(Configuration c) {
 		
 		String radius = c.getString("Radius");
 		if(radius == null || radius == "") {
 			radius = "20";
 		}
-		String onMessage = "&aAffichage des zones de spawn activ� !===&lASTUCE:&r &aL'utilisation de ce mode est plus simple la nuit.";
-		String offMessage = "&cAffichage des zones de spawn d�sactiv� !";
-		String noPermission = "&cTu n'as pas la permission !";
-		String noConsole = "&cCette commande ne peut pas �tre utilis�e par la console !";
-		String newVersion = "&eUne nouvelle version du plugin est disponible !";
-		String updateFail = "&cImpossible de v�rifier les mises � jour !";
+		String onMessage = "&aОтображения зоны спавна включено!===&lПОДСКАЗКА:&r &aДанный режим лучше использовать ночью.";
+		String offMessage = "&cОтображения зоны спавна отключено !";
+		String noPermission = "&cУ вас недостаточно прав !";
+		String noConsole = "&cTДанная команда не может быть исполнена из консоли !";
+		String newVersion = "&eДоступна новая версия плагина !";
+		String updateFail = "&cНе удалось проверить плагин на обновления !";
 		
 		String updateCheck = c.getString("UpdateCheck");
 		if(updateCheck == null || updateCheck == "") {
@@ -81,10 +83,10 @@ public class ConfigManager {
 			OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("./plugins/SpawnZoneVisualizer/config.yml"), StandardCharsets.UTF_8);
 			writer.write("# ========== Spawn Zone Visualizer by MaximePremont ==========\n"
 					+ "\n"
-					+ "# Rayon de v�rification ( mettre un trop grand rayon est inutile )\n"
+					+ "# Радиус проверки ( ставить большие значения - бессмысленно, из-за прогрузки )\n"
 					+ "Radius: "+radius+"\n"
 					+ "\n"
-					+"# Messages ( codes couleurs valides et utiliser === pour un retour � la ligne )\n"
+					+"# Локализация  ( с поддержкой цветовых кодов. Указывайте === для переноса на новую линию )\n"
 					+"Text:\n"
 					+ "    OnMessage: \""+onMessage+"\"\n"
 					+ "    OffMessage: \""+offMessage+"\"\n"
@@ -92,14 +94,64 @@ public class ConfigManager {
 					+ "    NoConsole: \""+noConsole+"\"\n"
 					+ "    NewVersion: \""+newVersion+"\"\n"
 					+ "    UpdateFail: \""+updateFail+"\"\n"
-					+"# Changer la langue modifiera automatiquement la configuration au prochain red�marrage\n"
-					+"# langues disposibles : EN | FR | OTHER\n"
+					+"# Смена языка приведёт к автоматической смене конфигурации при рестарте сервера\n"
+					+"# Доступные языки : EN | FR | RU | OTHER\n"
 					+ "Language: \"FR\"\n"
-					+ "# V�rifier les mises � jours\n"
+					+ "# Проверять ли обновления и оповещать о новых версиях в консоль\n"
+					+ "UpdateCheck: "+updateCheck+"\n"
+					+ "\n"
+					+ "# [Не трогать!] Версия конфигурации\n"
+					+ "ConfigVersion: 1.0.8#ru");
+			writer.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private static void setFR(Configuration c) {
+		
+		String radius = c.getString("Radius");
+		if(radius == null || radius == "") {
+			radius = "20";
+		}
+		String onMessage = "&aAffichage des zones de spawn activé !===&lASTUCE:&r &aL'utilisation de ce mode est plus simple la nuit.";
+		String offMessage = "&cAffichage des zones de spawn désactivé !";
+		String noPermission = "&cTu n'as pas la permission !";
+		String noConsole = "&cCette commande ne peut pas être utilisée par la console !";
+		String newVersion = "&eUne nouvelle version du plugin est disponible !";
+		String updateFail = "&cImpossible de vérifier les mises à jour !";
+		
+		String updateCheck = c.getString("UpdateCheck");
+		if(updateCheck == null || updateCheck == "") {
+			updateCheck = "true";
+		}
+		
+		try {
+			
+			OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("./plugins/SpawnZoneVisualizer/config.yml"), StandardCharsets.UTF_8);
+			writer.write("# ========== Spawn Zone Visualizer by MaximePremont ==========\n"
+					+ "\n"
+					+ "# Rayon de vérification ( mettre un trop grand rayon est inutile )\n"
+					+ "Radius: "+radius+"\n"
+					+ "\n"
+					+"# Messages ( codes couleurs valides et utiliser === pour un retour à la ligne )\n"
+					+"Text:\n"
+					+ "    OnMessage: \""+onMessage+"\"\n"
+					+ "    OffMessage: \""+offMessage+"\"\n"
+					+ "    NoPermission: \""+noPermission+"\"\n"
+					+ "    NoConsole: \""+noConsole+"\"\n"
+					+ "    NewVersion: \""+newVersion+"\"\n"
+					+ "    UpdateFail: \""+updateFail+"\"\n"
+					+"# Changer la langue modifiera automatiquement la configuration au prochain redémarrage\n"
+					+"# Langues disposibles : EN | FR | RU | OTHER\n"
+					+ "Language: \"FR\"\n"
+					+ "# Vérifier les mises à jours\n"
 					+ "UpdateCheck: "+updateCheck+"\n"
 					+ "\n"
 					+ "# [Ne pas toucher] Version de la configuration\n"
-					+ "ConfigVersion: 1.0.7#fr");
+					+ "ConfigVersion: 1.0.8#fr");
 			writer.close();
 			
 		} catch (IOException e) {
@@ -143,13 +195,13 @@ public class ConfigManager {
 					+ "    NewVersion: \""+newVersion+"\"\n"
 					+ "    UpdateFail: \""+updateFail+"\"\n"
 					+"# Changing the language will automatically change the configuration on the next reboot\n"
-					+"# Available languages : EN | FR | OTHER\n"
+					+"# Available languages : EN | FR | RU | OTHER\n"
 					+ "Language: \"EN\"\n"
 					+ "# Check for updates\n"
 					+ "UpdateCheck: "+updateCheck+"\n"
 					+ "\n"
 					+ "# [Do not touch] Configuration version\n"
-					+ "ConfigVersion: 1.0.7#en");
+					+ "ConfigVersion: 1.0.8#en");
 			writer.close();
 			
 		} catch (IOException e) {
@@ -214,13 +266,13 @@ public class ConfigManager {
 					+ "    NewVersion: \""+newVersion+"\"\n"
 					+ "    UpdateFail: \""+updateFail+"\"\n"
 					+"# Changing the language will automatically change the configuration on the next reboot\n"
-					+"# Available languages : EN | FR | OTHER\n"
+					+"# Available languages : EN | FR | RU | OTHER\n"
 					+ "Language: \""+language+"\"\n"
 					+ "# Check for updates\n"
 					+ "UpdateCheck: "+updateCheck+"\n"
 					+ "\n"
 					+ "# [Do not touch] Configuration version\n"
-					+ "ConfigVersion: 1.0.7#other");
+					+ "ConfigVersion: 1.0.8#other");
 			writer.close();
 			
 		} catch (IOException e) {
@@ -285,13 +337,13 @@ public class ConfigManager {
 					+ "    NewVersion: \""+newVersion+"\"\n"
 					+ "    UpdateFail: \""+updateFail+"\"\n"
 					+"# Changing the language will automatically change the configuration on the next reboot\n"
-					+"# Available languages : EN | FR | OTHER\n"
+					+"# Available languages : EN | FR | RU | OTHER\n"
 					+ "Language: \""+language+"\"\n"
 					+ "# Check for updates\n"
 					+ "UpdateCheck: "+updateCheck+"\n"
 					+ "\n"
 					+ "# [Do not touch] Configuration version\n"
-					+ "ConfigVersion: 1.0.7#CREATION");
+					+ "ConfigVersion: 1.0.8#CREATION");
 			writer.close();
 			
 		} catch (IOException e) {
