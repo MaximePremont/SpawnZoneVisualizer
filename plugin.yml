@@ -1,5 +1,5 @@
 main: fr.mpremont.SpawnZoneVisualizer.MainClass
-version: 1.0.8
+version: 1.0.9-beta-1
 author: MaximePremont
 api-version: 1.13
 name: SpawnZoneVisualizer

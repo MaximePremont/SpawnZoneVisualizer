@@ -10,6 +10,7 @@ import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_13_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_13_R2;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_14_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_15_R1;
+import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_16_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R1;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R2;
 import fr.mpremont.SpawnZoneVisualizer.interfaces.versions.V1_8_R3;
@@ -36,7 +37,10 @@ public class VersionsManager {
 			
 		}
 		
-		if(version.equals("v1_15_R1")) {
+		if(version.equals("v1_16_R1")) {
+			vclass = new V1_16_R1();
+			Bukkit.getConsoleSender().sendMessage("§a[§eSpawnZoneVisualizer§a] §dThis version is compatible with minecraft 1.16 but is still in development, problems may arise.");
+		}else if(version.equals("v1_15_R1")) {
 			vclass = new V1_15_R1();
 		}else if(version.equals("v1_14_R1")) {
 			vclass = new V1_14_R1();
